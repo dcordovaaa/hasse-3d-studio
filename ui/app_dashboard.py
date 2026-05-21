@@ -125,4 +125,5 @@ def actualizar_diagrama(n_clicks, n_submit, click_data, valor_ingresado):
         return dash.no_update, f"⚠️ Error técnico: {type(e).__name__} - {str(e)}"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    #app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT', 8050)))
