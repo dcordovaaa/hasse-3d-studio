@@ -2,19 +2,19 @@
 
 # Paleta de colores profesional y escalable
 PALETA = {
-    "fondo": "#FAF9F6",         
-    "texto_principal": "#2C2C2C",
-    "texto_secundario": "#A8A096",
-    "nodo_base": "#D9C5B2",     
-    "nodo_borde": "#2C2C2C",
+   "fondo": "#F0F4FF",              # Azul muy pálido — más luminoso que el crema anterior
+    "texto_principal": "#1A1A2E",    # Azul-negro profundo — más rico que el gris puro
+    "texto_secundario": "#8A8FAA",   # Azul-gris suave para texto auxiliar
+    "nodo_base": "#FFFFFF",          # Blanco puro — máximo contraste sobre el fondo
+    "nodo_borde": "#5C6BC0",         # Índigo medio — borde visible y elegante
     "error": "#E07A5F",
     
     # (HOVERS Y CLICS)
-    "acento": "#E07A5F",          # Terracota vivo para el nodo que recibe el clic
-    "relacionado": "#F2CC8F",     # Amarillo/Crema cálido para los múltiplos y divisores
-    "inactivo": "#EAE5DF",        # Gris muy pálido para apagar los nodos no relacionados
-    "arista_activa": "#2C2C2C",   # Línea oscura fuerte para la ruta de divisibilidad
-    "arista_inactiva": "#EAE5DF"  # Línea difuminada para el resto del diagrama
+    "acento": "#FF6B35",             # Naranja vivo — más luminoso que la terracota anterior
+    "relacionado": "#FFD166",        # Amarillo sol — brillante y legible
+    "inactivo": "#E8ECF8",           # Azul muy desaturado — apaga sin ser gris genérico
+    "arista_activa": "#1A1A2E",      # Mismo azul-negro del texto — grosor manda aquí
+    "arista_inactiva": "#C5CCEB"     # Azul claro difuminado — se distingue del fondo
 }
 
 # Configuración de Tipografía y Tamaños
