@@ -71,7 +71,8 @@ ESTILO_LIENZO = {
 }
 
 ESTILO_INPUT = {
-    "padding": "14px 15px",
+    "padding": "10px 15px",
+    "height": "42px",
     "fontSize": "15px",
     "borderRadius": "8px",
     "border": f"2px solid {PALETA['inactivo']}",
