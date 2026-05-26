@@ -20,7 +20,7 @@ PALETA = {
 # Configuración de Tipografía y Tamaños
 TIPOGRAFIA = {
     "familia": "'Poppins', sans-serif",
-    "tamano_nodo": 14,          # Aumentaremos esto luego para mejor legibilidad
+    "tamano_nodo": 18,          # Aumentaremos esto luego para mejor legibilidad
     "radio_esfera": 22
 }
 
