@@ -52,8 +52,8 @@ app.layout = html.Div(style=ESTILO_APP_ROOT, children=[
 
         # Instrucciones de uso ancladas abajo
         html.Div(style={"marginTop": "auto", "fontSize": "13px", "color": PALETA["texto_secundario"]}, children=[
-            html.P("-> Clic izquierdo para orbitar."),
-            html.P("-> Scroll para hacer zoom."),
+            html.P("-> Desarrollado por estudiantes de la UPC"),
+            html.P("-> TIP para ver los divisores y multiples de un nodo."),
             html.P("-> Clic en un nodo para aislar sus relaciones.")
         ])
     ]),
