@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hasse-bg: #FAF9F6;
+  --color-hasse-text: #2C2C2C;
+  --color-hasse-text-muted: #A8A096;
+  --color-hasse-node: #D9C5B2;
+  --color-hasse-accent: #E07A5F;
+  --color-hasse-border: #EAE5DF;
+
+  --font-sans: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-hasse-bg);
+  color: var(--color-hasse-text);
+}

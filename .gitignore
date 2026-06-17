@@ -1,4 +1,25 @@
-__pycache__/
-.env
+# ===== Python (backend) =====
 venv/
+*/venv/
+__pycache__/
+*/__pycache__/
 *.pyc
+.pytest_cache/
+*/.pytest_cache/
+
+# ===== Node / React (frontend) =====
+node_modules/
+*/node_modules/
+frontend/dist/
+frontend/build/
+
+# ===== Entornos y secretos =====
+.env
+*.env
+
+# ===== Sistema operativo =====
+.DS_Store
+Thumbs.db
+
+# ===== Editor =====
+.vscode/
