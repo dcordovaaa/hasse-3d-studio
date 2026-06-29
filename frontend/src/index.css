@@ -1,18 +1,58 @@
 @import "tailwindcss";
 
 @theme {
-  --color-hasse-bg: #FAF9F6;
-  --color-hasse-text: #2C2C2C;
-  --color-hasse-text-muted: #A8A096;
-  --color-hasse-node: #D9C5B2;
-  --color-hasse-accent: #E07A5F;
-  --color-hasse-border: #EAE5DF;
+  --color-hasse-bg: var(--theme-bg);
+  --color-hasse-text: var(--theme-text);
+  --color-hasse-text-muted: var(--theme-text-muted);
+  --color-hasse-node: var(--theme-node);
+  --color-hasse-accent: var(--theme-accent);
+  --color-hasse-border: var(--theme-border);
 
   --font-sans: 'Poppins', sans-serif;
 }
 
+:root {
+  /* TEMA 1: Claro (Lo-Fi) */
+  --theme-bg: #FAF9F6;
+  --theme-text: #2C2C2C;
+  --theme-text-muted: #A8A096;
+  --theme-node: #D9C5B2;
+  --theme-accent: #E07A5F;
+  --theme-border: #EAE5DF;
+}
+
+[data-theme="oscuro"] {
+  /* TEMA 2: Oscuro */
+  --theme-bg: #18181b;       /* Zinc 900 */
+  --theme-text: #f4f4f5;     /* Zinc 100 */
+  --theme-text-muted: #a1a1aa; /* Zinc 400 */
+  --theme-node: #3f3f46;     /* Zinc 700 */
+  --theme-accent: #38bdf8;   /* Sky 400 (Azul eléctrico) */
+  --theme-border: #27272a;   /* Zinc 800 */
+}
+
+[data-theme="contraste"] {
+  /* TEMA 3: Alto Contraste (Neobrutalismo) */
+  --theme-bg: #000000;
+  --theme-text: #ffffff;
+  --theme-text-muted: #d4d4d8;
+  --theme-node: #000000;
+  --theme-accent: #facc15;   /* Amarillo vibrante */
+  --theme-border: #ffffff;
+}
+
 body {
   margin: 0;
-  background-color: var(--color-hasse-bg);
-  color: var(--color-hasse-text);
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ocultar barra de scroll para el panel lateral */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
