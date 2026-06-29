@@ -4,10 +4,11 @@ import {
   Play, AlertCircle, Box, Activity, ShieldCheck, ShieldAlert, 
   Download, Clock, MousePointer2, CheckSquare, SearchCode, 
   PanelLeftClose, Menu, Sun, Moon, Contrast, 
-  Eye, ChevronDown, ChevronUp // NUEVOS ÍCONOS DIDÁCTICOS
+  Eye, ChevronDown, ChevronUp, Users // NUEVOS ÍCONOS DIDÁCTICOS
 } from 'lucide-react';
 import { generarDiagrama, analizarSubconjunto } from './api/hasseService';
 import HasseCanvas from './webgl/HasseCanvas';
+import CreditosModal from './components/CreditosModal';
 
 function App() {
   const [inputData, setInputData] = useState('30');
@@ -28,6 +29,8 @@ function App() {
   // NUEVOS ESTADOS DIDÁCTICOS
   const [revelarGlobal, setRevelarGlobal] = useState(false);
   const [mostrarExplicacion, setMostrarExplicacion] = useState(false);
+
+  const [mostrarCreditos, setMostrarCreditos] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', tema);
@@ -164,6 +167,15 @@ function App() {
               <Box className="w-8 h-8 text-hasse-accent" /> Studio-Hasse
             </h1>
             <div className="flex gap-1 bg-hasse-border/30 p-1 rounded-lg">
+              {/*BOTÓN DE CRÉDITOS */}
+              <button 
+                onClick={() => setMostrarCreditos(true)} 
+                title="Equipo de Desarrollo" 
+                className="p-1.5 rounded-md text-hasse-text-muted hover:text-hasse-text hover:bg-white transition-colors"
+              >
+                <Users className="w-4 h-4" />
+              </button>
+            
               <button onClick={() => setTema('claro')} title="Modo Claro" className={`p-1.5 rounded-md transition-colors ${tema === 'claro' ? 'bg-hasse-bg text-hasse-accent shadow-sm' : 'text-hasse-text-muted hover:text-hasse-text'}`}><Sun className="w-4 h-4" /></button>
               <button onClick={() => setTema('oscuro')} title="Modo Oscuro" className={`p-1.5 rounded-md transition-colors ${tema === 'oscuro' ? 'bg-hasse-bg text-hasse-accent shadow-sm' : 'text-hasse-text-muted hover:text-hasse-text'}`}><Moon className="w-4 h-4" /></button>
               <button onClick={() => setTema('contraste')} title="Alto Contraste" className={`p-1.5 rounded-md transition-colors ${tema === 'contraste' ? 'bg-hasse-bg text-hasse-accent shadow-sm' : 'text-hasse-text-muted hover:text-hasse-text'}`}><Contrast className="w-4 h-4" /></button>
@@ -354,7 +366,9 @@ function App() {
           )}
         </div>
       </div>
-      
+      {mostrarCreditos && (
+        <CreditosModal onClose={() => setMostrarCreditos(false)} tema={tema} />
+      )}
     </div>
   );
 }
