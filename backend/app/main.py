@@ -19,9 +19,21 @@ app = FastAPI(
     version="2.0.0"
 )
 
+# --- CONFIGURACIÓN DE SEGURIDAD (CORS) PARA PRODUCCIÓN ---
+# Capturamos la URL del frontend desde las variables de entorno de nuestro servidor.
+# Si no existe, permitimos localhost por defecto para que puedas seguir testeando en tu PC.
+origenes_permitidos = [
+    "http://localhost:5173",  # Puerto por defecto de Vite (React)
+    "http://localhost:3000",
+    os.getenv("FRONTEND_URL", "") # Aquí entrará tu futura URL de Vercel
+]
+
+# Filtramos strings vacíos por si la variable de entorno no está configurada aún
+origenes_permitidos = [origen for origen in origenes_permitidos if origen]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], 
+    allow_origins=origenes_permitidos, 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -1,7 +1,8 @@
 // frontend/src/api/hasseService.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api';
+// Vite inyectará la URL en producción, pero en tu PC usará localhost:8000
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 export const generarDiagrama = async (entrada) => {
   try {
