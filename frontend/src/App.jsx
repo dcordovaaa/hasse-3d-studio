@@ -147,8 +147,10 @@ function App() {
 
       <button 
         onClick={() => setPanelAbierto(!panelAbierto)}
-        className={`absolute top-8 z-20 p-2.5 bg-hasse-bg/90 backdrop-blur-md rounded-xl shadow-sm border border-hasse-border text-hasse-text hover:bg-hasse-border/30 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-          panelAbierto ? 'left-[26.5rem]' : 'left-6'
+        className={`absolute top-6 md:top-8 z-30 p-2.5 bg-hasse-bg/90 backdrop-blur-md rounded-xl shadow-sm border border-hasse-border text-hasse-text hover:bg-hasse-border/30 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+          panelAbierto 
+            ? 'left-[calc(100vw-3.5rem)] md:left-[26.5rem]' 
+            : 'left-4 md:left-6'
         }`}
         title={panelAbierto ? "Ocultar panel" : "Mostrar panel"}
       >
@@ -156,11 +158,11 @@ function App() {
       </button>
 
       <div 
-        className={`absolute top-6 bottom-6 w-96 flex flex-col z-10 pointer-events-none transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-          panelAbierto ? 'translate-x-6' : '-translate-x-[110%]'
+        className={`absolute top-4 bottom-4 md:top-6 md:bottom-6 w-[calc(100vw-5rem)] md:w-96 flex flex-col z-20 pointer-events-none transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
+          panelAbierto ? 'translate-x-4 md:translate-x-6' : '-translate-x-[115%]'
         }`}
       >
-        <div className="bg-hasse-bg/85 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.1)] border border-hasse-border flex flex-col p-7 rounded-3xl overflow-y-auto hide-scrollbar pointer-events-auto h-full">
+        <div className="bg-hasse-bg/85 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.1)] border border-hasse-border flex flex-col p-5 md:p-7 rounded-3xl overflow-y-auto hide-scrollbar pointer-events-auto h-full">
           
           <div className="flex justify-between items-start mb-6">
             <h1 className="text-3xl font-bold text-hasse-text flex items-center gap-2">
