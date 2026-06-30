@@ -6,7 +6,7 @@ const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 export const generarDiagrama = async (entrada) => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/diagrama`, {
+    const response = await axios.get(`${API_BASE_URL}/api/diagrama`, {
       params: { entrada: entrada }
     });
     return response.data;
@@ -21,7 +21,7 @@ export const generarDiagrama = async (entrada) => {
 // NUEVA FUNCIÓN: Para el análisis de subretículas
 export const analizarSubconjunto = async (nodos_padre, subconjunto) => {
     try {
-      const response = await axios.post(`${API_BASE_URL}/analizar-subconjunto`, { nodos_padre, subconjunto });
+      const response = await axios.post(`${API_BASE_URL}/api/analizar-subconjunto`, { nodos_padre, subconjunto });
       return response.data;
     } catch (error) {
       if (error.response && error.response.data) {
