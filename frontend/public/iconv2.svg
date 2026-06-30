@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Líneas de conexión -->
+  <path d="M32 52L16 20M32 52L48 20" stroke="#FF6B6B" stroke-width="5" stroke-linecap="round"/>
+  <path d="M16 20L32 10L48 20" stroke="#FF6B6B" stroke-width="5" stroke-linecap="round"/>
+  <!-- Nodos -->
+  <circle cx="32" cy="52" r="6" fill="#FF6B6B"/>
+  <circle cx="16" cy="20" r="6" fill="#FF6B6B"/>
+  <circle cx="48" cy="20" r="6" fill="#FF6B6B"/>
+  <circle cx="32" cy="10" r="6" fill="#FF6B6B"/>
+</svg>

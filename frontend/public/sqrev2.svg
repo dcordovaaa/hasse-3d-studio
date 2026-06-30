@@ -1,0 +1,6 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cubo isométrico abstracto -->
+  <path d="M32 6L6 22L32 38L58 22L32 6Z" stroke="#4F46E5" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M6 22V42L32 58V38" stroke="#4F46E5" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M58 22V42L32 58" stroke="#4F46E5" stroke-width="4" stroke-linejoin="round"/>
+</svg>
